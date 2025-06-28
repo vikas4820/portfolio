@@ -1,0 +1,70 @@
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.portfolio-filters li {
+  padding: 12px 28px;
+  border-radius: 32px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #444;
+  background: linear-gradient(145deg, #ffffff, #e6ecf7);
+  border: 1.5px solid #d3dff5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-filters li::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #0563bb, #7f9cfa);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.portfolio-filters li:hover::before {
+  opacity: 0.08;
+}
+
+.portfolio-filters li:hover {
+  color: #0563bb;
+  /* transform: translateY(-2px);  <-- REMOVED */
+  border-color: #0563bb;
+  box-shadow: 0 8px 24px rgba(61, 139, 255, 0.25);
+}
+
+.portfolio-filters li::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #0563bb;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.portfolio-filters li:hover::after,
+.portfolio-filters .filter-active::after {
+//   width: 60%;
+}
+
+.portfolio-filters .filter-active {
+  background: linear-gradient(135deg, #0563bb, #6f91fc);
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 6px 20px rgba(61, 139, 255, 0.4);
+  z-index: 1;
+}

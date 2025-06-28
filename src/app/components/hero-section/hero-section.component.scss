@@ -1,0 +1,72 @@
+@media (max-width: 768px) {
+  #hero {
+    display: flex;
+    align-items: flex-start; // Align to top
+    justify-content: flex-start; // Align to left
+    padding-top: 4rem; // optional spacing
+    padding-left: 1rem;
+
+    .container {
+      max-width: 100%;
+      text-align: left;
+
+      h2, p {
+        text-align: left;
+      }
+
+      .social-links {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #444; /* default color */
+  transition: color 0.3s ease;
+}
+
+/* Facebook */
+.social-links a:hover .bi-facebook {
+  color: #1877f2; /* Facebook Blue */
+}
+
+/* Instagram */
+.social-links a:hover .bi-instagram {
+  color: #e1306c; /* Instagram Pink */
+}
+
+/* LinkedIn */
+.social-links a:hover .bi-linkedin {
+  color: #0077b5; /* LinkedIn Blue */
+}
+
+/* Optional: Twitter X if used */
+.social-links a:hover .bi-twitter-x {
+  color: #000; /* Black for Twitter X */
+}
+
+.social-links a:hover .bi-github {
+  color: #333; /* GitHub dark grey */
+}
+
+/* Show desktop image, hide on small screens */
+.desktop-img {
+  display: block;
+}
+.mobile-img {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+  }
+}
+

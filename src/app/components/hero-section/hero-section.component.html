@@ -1,23 +1,25 @@
 <!-- Hero Section -->
 <section id="hero" class="hero section light-background">
-    <!-- <img src="/img/hero-bg.jpg" alt="" /> -->
-    <img src="img/hero-bg.jpg" alt="" />
+    <!-- <img src="img/hero-bg2.png" alt="" /> -->
+    <img src="img/hero-bg2.png" alt="" class="d-none d-md-block" />
+    <img src="img/hero-bg1.png" alt="" class="d-block d-md-none" />
 
     <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
             <div class="col-lg-9">
-                <h2>Brandon Johnson</h2>
+                <h2>Vikas Singh</h2>
                 <p>
                     I'm
                     <span class="typed"
-                        data-typed-items="Designer, Developer, Freelancer, Photographer">Designer</span><span
+                        data-typed-items="Full-Stack Developer, Frontend Engineer, Backend Specialist, Software Engineer, Web Developer, Problem Solver, Creative Coder, Team Player">Developer</span><span
                         class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
                 </p>
                 <div class="social-links">
-                    <a href="#"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="{{ profileInfo.twitter }}" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                    <a href="{{ profileInfo.facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="{{ profileInfo.instagram }}"  target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="{{ profileInfo.linkedin }}"  target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="{{ profileInfo.github }}" target="_blank"><i class="bi bi-github"></i></a>
                 </div>
             </div>
         </div>

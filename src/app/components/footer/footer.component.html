@@ -1,1 +1,67 @@
-<p>footer works!</p>
+<footer id="footer" class="footer position-relative light-background">
+  <div class="container">
+    <h3 class="sitename">Vikas Singh</h3>
+    <p>
+      With a mind for code and a heart for design, I bring ideas to life from database to browser.
+    </p>
+    <div class="social-links d-flex justify-content-center">
+  <a *ngIf="profileInfo.twitter" 
+     [href]="profileInfo.twitter" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="X (Twitter)">
+    <i class="bi bi-twitter-x"></i>
+  </a>
+
+  <a *ngIf="profileInfo.facebook" 
+     [href]="profileInfo.facebook" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Facebook">
+    <i class="bi bi-facebook"></i>
+  </a>
+
+  <a *ngIf="profileInfo.instagram" 
+     [href]="profileInfo.instagram" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Instagram">
+    <i class="bi bi-instagram"></i>
+  </a>
+
+  <a *ngIf="profileInfo.skype" 
+     [href]="profileInfo.skype" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Skype">
+    <i class="bi bi-skype"></i>
+  </a>
+
+  <a *ngIf="profileInfo.linkedin" 
+     [href]="profileInfo.linkedin" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="LinkedIn">
+    <i class="bi bi-linkedin"></i>
+  </a>
+
+  <a *ngIf="profileInfo.github" 
+     [href]="profileInfo.github" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="GitHub">
+    <i class="bi bi-github"></i>
+  </a>
+</div>
+
+
+
+  </div>
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>

@@ -1,0 +1,53 @@
+.text-danger {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #dc3545;
+}
+
+/* Base styling for all form controls */
+input.form-control,
+textarea.form-control {
+  border-radius: 0.5rem !important; /* Rounded corners */
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+/* Error border for invalid fields */
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+input.ng-invalid.ng-dirty,
+textarea.ng-invalid.ng-dirty {
+  border-color: #dc3545 !important;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Optional: success state */
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched {
+  border-color: #28a745;
+}
+
+button[type="submit"] {
+  padding: 10px 25px;
+  border-radius: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect when enabled */
+button[type="submit"]:hover:enabled {
+  background-color: #0056b3;
+}
+
+/* Disabled button style */
+button[type="submit"]:disabled {
+  background-color: #cccccc;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
