@@ -19,27 +19,58 @@ const CONSTANT = {
       duration: '2018-2021',
       place: 'Chhatrapati Shahu Ji Maharaj University, Kanpur',
       description: 'Completed a broad-based undergraduate program with a focus on humanities and social sciences, enhancing analytical thinking, communication skills, and a well-rounded academic foundation.'
+    },
+    btech: {
+      name: 'Bachelor of Technology',
+      branch: 'Computer Science & Engineering',
+      year: '3rd Year (Pursuing)',
+      university: 'Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow',
+      description:
+        'Currently pursuing B.Tech in Computer Science & Engineering with a strong focus on software development, data structures, algorithms, database management systems, and modern web technologies.'
     }
   },
   PROFESSIONAL_EXP: {
-    name: 'Associate Software Engineer',
-    duration: '2022-Present',
-    place: 'Jamtech Technologies Pvt. Ltd. Lucknow',
+    name: 'Senior Software Engineer',
+    duration: '2025 – Present',
+    place: 'Jamtech Technologies Pvt. Ltd., Lucknow',
     description: [
-      { 
-        text: 'Led the design and development of scalable web applications using Angular and NestJS, delivering responsive and user-friendly interfaces integrated with robust backend services.' 
+      { text: 'Leading end-to-end development of critical application modules using Angular, NestJS, and MySQL/MongoDB.' },
+      { text: 'Designing application architecture, enforcing coding standards, and ensuring scalable and secure solutions.' },
+      { text: 'Mentoring junior and associate developers, conducting code reviews, and guiding the team on best practices.' },
+      { text: 'Actively involved in requirement analysis, technical decision-making, and deployment strategies.' }
+    ],
+    careerProgression: [
+      {
+        role: 'Junior Software Engineer',
+        duration: '2022 – 2023',
+        description: [
+          'Started as a Junior Developer, contributing to frontend development using Angular and assisting in backend API integration with Node.js and NestJS.',
+          'Worked on bug fixing, feature enhancements, and UI improvements under senior developer guidance.',
+          'Gained hands-on experience with Git workflows, Agile methodologies, and real-world production environments.'
+        ]
       },
       {
-        text: 'Implemented RESTful APIs and microservices architecture with Node.js and NestJS, ensuring clean, maintainable code and efficient data handling.' 
+        role: 'Associate Software Engineer',
+        duration: '2023 – 2025',
+        description: [
+          'Took ownership of complete modules, developing scalable frontend components and backend APIs.',
+          'Collaborated directly with designers and backend teams to implement business requirements efficiently.',
+          'Improved application performance, code quality, and maintainability through refactoring and optimization.'
+        ]
       },
       {
-        text: 'Mentored junior developers in Angular best practices and contributed to code reviews, improving overall code quality and team efficiency.' 
-      },
-      {
-        text: 'Optimized application performance through lazy loading, caching strategies, and database query tuning, resulting in up to 40% faster load times.' 
+        role: 'Senior Software Engineer',
+        duration: '2025 – Present',
+        description: [
+          'Leading end-to-end development of critical application modules using Angular, NestJS, and MySQL/MongoDB.',
+          'Designing application architecture, enforcing coding standards, and ensuring scalable and secure solutions.',
+          'Mentoring junior and associate developers, conducting code reviews, and guiding the team on best practices.',
+          'Actively involved in requirement analysis, technical decision-making, and deployment strategies.'
+        ]
       }
     ]
   },
+
   APPRENTICESHIP_EXP: {
     name: 'Apprentice Web Developer',
     duration: '8 Months',

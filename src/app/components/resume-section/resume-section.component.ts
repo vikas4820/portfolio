@@ -28,6 +28,13 @@ export class ResumeSectionComponent {
         duration: CONSTANT.EDUCATION.graduation.duration,
         place: CONSTANT.EDUCATION.graduation.place,
         description: CONSTANT.EDUCATION.graduation.description
+      },
+      btech: {
+        name: CONSTANT.EDUCATION.btech.name,
+        branch: CONSTANT.EDUCATION.btech.branch,
+        year: CONSTANT.EDUCATION.btech.year,
+        university: CONSTANT.EDUCATION.btech.university,
+        description: CONSTANT.EDUCATION.btech.description
       }
     },
     professional_exp: {
@@ -36,6 +43,7 @@ export class ResumeSectionComponent {
         duration: CONSTANT.PROFESSIONAL_EXP.duration,
         place: CONSTANT.PROFESSIONAL_EXP.place,
         description: CONSTANT.PROFESSIONAL_EXP.description,
+        careerProgression: CONSTANT.PROFESSIONAL_EXP.careerProgression
       },
       apprenticeship: {
         name: CONSTANT.APPRENTICESHIP_EXP.name,
@@ -46,6 +54,9 @@ export class ResumeSectionComponent {
     },
      
   }
+
+  reversedCareerProgression = [...this.userInfo.professional_exp.job.careerProgression].reverse();
+
   constructor() {}
 
 }

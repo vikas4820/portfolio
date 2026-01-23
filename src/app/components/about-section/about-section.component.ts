@@ -14,11 +14,11 @@ export class AboutSectionComponent {
     dob: '08 August 2002',
     age: 22,
     website: 'https://www.jamtechtechnologies.com',
-    education: 'Diploma In CSE',
+    education: 'Diploma In CSE & Btech Appearing',
     phoneNo: '+91 9369894820',
     email: "vkchauhan877cool@gmail.com",
     city: 'Gola Gokran Nath, Kheri, U.P.',
-    freelance: 'Available'
+    freelance: 'Available',
   };
 
   constructor(){

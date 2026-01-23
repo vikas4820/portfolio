@@ -25,6 +25,17 @@
                 </div><!-- Edn Resume Item -->
 
                 <h3 class="resume-title">Education</h3>
+
+                <div class="resume-item">
+                    <h4>
+                        {{ userInfo.education.btech.name }} 
+                        ({{ userInfo.education.btech.branch }})
+                    </h4>
+                    <h5>{{ userInfo.education.btech.year }}</h5>
+                    <p><em>{{ userInfo.education.btech.university }}</em></p>
+                    <p>{{ userInfo.education.btech.description }}</p>
+                </div>
+
                 <div class="resume-item">
                     <h4>{{ userInfo.education.diploma.name }}</h4>
                     <h5>{{ userInfo.education.diploma.duration }}</h5>
@@ -43,6 +54,8 @@
 
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="resume-title">Professional Experience</h3>
+
+                <!-- Current Senior Position (TOP) -->
                 <div class="resume-item">
                     <h4>{{ userInfo.professional_exp.job.name }}</h4>
                     <h5>{{ userInfo.professional_exp.job.duration }}</h5>
@@ -52,8 +65,23 @@
                             {{ item.text }}
                         </li>
                     </ul>
-                </div><!-- Edn Resume Item -->
+                </div>
 
+                <!-- Career Progression (Newest to Oldest) -->
+                <div class="resume-item">
+                    <h4>Career Progression</h4>
+                    <div *ngFor="let role of reversedCareerProgression" class="mb-3">
+                        <h5>{{ role.role }}</h5>
+                        <span class="text-muted">{{ role.duration }}</span>
+                        <ul>
+                            <li *ngFor="let desc of role.description">
+                                {{ desc }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apprenticeship -->
                 <div class="resume-item">
                     <h4>{{ userInfo.professional_exp.apprenticeship.name }}</h4>
                     <h5>{{ userInfo.professional_exp.apprenticeship.duration }}</h5>
@@ -63,8 +91,7 @@
                             {{ item.text }}
                         </li>
                     </ul>
-                </div><!-- Edn Resume Item -->
-
+                </div>
             </div>
 
         </div>
