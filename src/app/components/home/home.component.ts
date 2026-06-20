@@ -19,7 +19,7 @@ import { ContactSectionComponent } from '../contact-section/contact-section.comp
     ResumeSectionComponent,
     PortfolioSectionComponent,
     ServicesSectionComponent,
-    TestimonialsSectionComponent,
+    // TestimonialsSectionComponent,
     ContactSectionComponent
   ],
   templateUrl: './home.component.html',
