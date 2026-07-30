@@ -38,7 +38,8 @@
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="php-email-form" novalidate>
           <div class="row gy-4">
             <div class="col-md-6">
-              <input type="text" formControlName="name" class="form-control" placeholder="Your Name" />
+              <label for="contact-name">Your name</label>
+              <input id="contact-name" type="text" formControlName="name" class="form-control" placeholder="Jane Smith" autocomplete="name" />
               <div *ngIf="(f['name'].touched || f['name'].dirty) && f['name'].errors" class="text-danger small">
                 <div *ngIf="f['name'].errors['required']">Name is required.</div>
                 <div *ngIf="f['name'].errors['minlength']">Name must be at least 2 characters.</div>
@@ -46,7 +47,8 @@
             </div>
 
             <div class="col-md-6">
-              <input type="email" formControlName="email" class="form-control" placeholder="Your Email" />
+              <label for="contact-email">Email address</label>
+              <input id="contact-email" type="email" formControlName="email" class="form-control" placeholder="jane@company.com" autocomplete="email" />
               <div *ngIf="(f['email'].touched || f['email'].dirty) && f['email'].errors" class="text-danger small">
                 <div *ngIf="f['email'].errors['required']">Email is required.</div>
                 <div *ngIf="f['email'].errors['email']">Invalid email format.</div>
@@ -54,14 +56,16 @@
             </div>
 
             <div class="col-md-12">
-              <input type="text" formControlName="subject" class="form-control" placeholder="Subject" />
+              <label for="contact-subject">Subject</label>
+              <input id="contact-subject" type="text" formControlName="subject" class="form-control" placeholder="Project enquiry" />
               <div *ngIf="(f['subject'].touched || f['subject'].dirty) && f['subject'].errors" class="text-danger small">
                 <div *ngIf="f['subject'].errors['required']">Subject is required.</div>
               </div>
             </div>
 
             <div class="col-md-12">
-              <textarea class="form-control" formControlName="message" rows="6" placeholder="Message"></textarea>
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-control" formControlName="message" rows="6" placeholder="Tell me a little about your project"></textarea>
               <div *ngIf="(f['message'].touched || f['message'].dirty) && f['message'].errors" class="text-danger small">
                 <div *ngIf="f['message'].errors['required']">Message is required.</div>
                 <div *ngIf="f['message'].errors['minlength']">Message must be at least 10 characters.</div>
@@ -69,7 +73,8 @@
             </div>
 
             <div class="col-md-12 text-center">
-              <button type="submit" [disabled]="submitted || !contactForm.valid">Send Message</button>
+              <button type="submit" [disabled]="submitted">Send Message</button>
+              <p *ngIf="statusMessage" class="form-status" role="status">{{ statusMessage }}</p>
             </div>
           </div>
         </form>

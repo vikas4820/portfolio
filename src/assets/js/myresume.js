@@ -2,35 +2,6 @@ window.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
   /**
-   * Header toggle
-   */
-  const headerToggleBtn = document.querySelector('.header-toggle');
-  const header = document.querySelector('#header');
-
-  function headerToggle() {
-    if (header && headerToggleBtn) {
-      header.classList.toggle('header-show');
-      headerToggleBtn.classList.toggle('bi-list');
-      headerToggleBtn.classList.toggle('bi-x');
-    }
-  }
-
-  if (headerToggleBtn) {
-    headerToggleBtn.addEventListener('click', headerToggle);
-  }
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.header-show')) {
-        headerToggle();
-      }
-    });
-  });
-
-  /**
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {

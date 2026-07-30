@@ -53,30 +53,30 @@
 /* Preview Button */
 .preview-btn {
     background: transparent;
-    color: #0563bb;
-    border: 2px solid #0563bb;
+    color: #5b4cf0;
+    border: 2px solid #5b4cf0;
 }
 
 .preview-btn:hover {
-    background: #0563bb;
+    background: #5b4cf0;
     color: #fff;
     transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(5,99,187,.25);
+    box-shadow: 0 12px 30px rgba(91,76,240,.25);
 }
 
 /* Download Button */
 .download-btn {
-    background: linear-gradient(135deg, #0563bb, #0a78de);
+    background: #5b4cf0;
     color: #fff;
     border: 2px solid transparent;
-    box-shadow: 0 10px 25px rgba(5,99,187,.35);
+    box-shadow: 0 10px 25px rgba(91,76,240,.28);
 }
 
 .download-btn:hover {
-    background: linear-gradient(135deg, #04539d, #0563bb);
+    background: #493bd1;
     color: #fff;
     transform: translateY(-4px);
-    box-shadow: 0 16px 35px rgba(5,99,187,.45);
+    box-shadow: 0 16px 35px rgba(91,76,240,.34);
 }
 
 .resume-btn:active {

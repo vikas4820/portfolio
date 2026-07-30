@@ -39,17 +39,27 @@
           class="col-lg-4 col-md-6 portfolio-item isotope-item"
           [ngClass]="project.filter"
         >
-          <img [src]="project.image" class="img-fluid" [alt]="project.title" />
+          <img
+            [src]="project.image"
+            class="img-fluid"
+            [alt]="project.title"
+            loading="lazy"
+            decoding="async"
+            width="1200"
+            height="750"
+          />
 
           <div class="portfolio-info">
+            <span class="project-category">{{ project.category }}</span>
             <h4>{{ project.title }}</h4>
             <p>{{ project.description }}</p>
 
             <a
               [href]="project.website"
               target="_blank"
+              rel="noopener noreferrer"
               class="details-link"
-              title="Visit Website"
+              [attr.aria-label]="'Visit ' + project.title + ' website'"
             >
               <i class="bi bi-link-45deg"></i>
             </a>

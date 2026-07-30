@@ -1,8 +1,23 @@
-<header id="header" class="header d-flex flex-column justify-content-center">
+<header id="header" class="header" [class.header-show]="isOpen">
+    <a class="brand" href="#hero" (click)="scrollTo($event, 'hero')" aria-label="Vikas Singh home">
+        <span class="brand-mark">VS</span>
+        <span class="brand-copy">
+            <strong>Vikas Singh</strong>
+            <small>Full-stack developer</small>
+        </span>
+    </a>
 
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <button
+        type="button"
+        class="header-toggle d-lg-none"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isOpen"
+        aria-controls="navmenu"
+        aria-label="Toggle navigation">
+        <i class="bi" [class.bi-list]="!isOpen" [class.bi-x]="isOpen" aria-hidden="true"></i>
+    </button>
 
-    <nav id="navmenu" class="navmenu">
+    <nav id="navmenu" class="navmenu" [attr.aria-hidden]="!isOpen && null">
         <ul>
             <li><a href="#hero" (click)="scrollTo($event, 'hero')" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
             <li><a href="#about" (click)="scrollTo($event, 'about')"><i class="bi bi-person navicon"></i><span>About</span></a></li>
@@ -13,4 +28,7 @@
         </ul>
     </nav>
 
+    <a class="header-cta" href="#contact" (click)="scrollTo($event, 'contact')">
+        Let's talk <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+    </a>
 </header>

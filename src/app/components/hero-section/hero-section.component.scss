@@ -29,6 +29,57 @@
   transition: color 0.3s ease;
 }
 
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.hero-eyebrow::before {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background: currentColor;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 2rem;
+}
+
+.hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .85rem 1.15rem;
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 82%);
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.hero-actions .primary-action {
+  color: #fff;
+  background: #5b4cf0;
+  border-color: #5b4cf0;
+  box-shadow: 0 12px 30px rgba(91, 76, 240, .22);
+}
+
+.hero-actions .secondary-action {
+  color: #201a3a;
+  background: rgba(255, 255, 255, .72);
+  border-color: rgba(38, 28, 68, .14);
+  backdrop-filter: blur(12px);
+}
+
 /* Facebook */
 .social-links a:hover .bi-facebook {
   color: #1877f2; /* Facebook Blue */

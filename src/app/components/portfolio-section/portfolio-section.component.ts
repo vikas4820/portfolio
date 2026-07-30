@@ -24,7 +24,7 @@ export class PortfolioSectionComponent {
       filter: 'filter-web',
       description:
         'Luxury delivery platform operating across Italy. Customers can order cakes, flowers, champagne, gifts, and exclusive experiences. I developed the complete full-stack platform along with the admin panel and management system.',
-      image: 'img/projects/deluxy.png',
+      image: 'img/projects/deluxy-optimized.webp',
       website: 'https://deluxy.it/',
     },
     {
@@ -33,7 +33,7 @@ export class PortfolioSectionComponent {
       filter: 'filter-web',
       description:
         'Business review and reputation management platform for companies in Zimbabwe. Features include company profiles, ratings, reviews, moderation tools, and a comprehensive admin dashboard. I developed both the website and admin system.',
-      image: 'img/projects/review.png',
+      image: 'img/projects/review-optimized.webp',
       website: 'https://review.co.zw/',
     },
     {
@@ -42,14 +42,14 @@ export class PortfolioSectionComponent {
       filter: 'filter-web',
       description:
         'International review and recommendation platform that enables users to discover, rate, and review businesses worldwide. Built the complete platform and admin panel with scalable architecture and management features.',
-      image: 'img/projects/reviewinternational.png',
+      image: 'img/projects/reviewinternational-optimized.webp',
       website: 'https://reviewinternational.org/',
     },
     {
       title: 'CakeDesign.me',
       category: 'Custom Cake Platform',
       filter: 'filter-web',
-      image: 'img/projects/cakedesign.png',
+      image: 'img/projects/cakedesign-optimized.webp',
       website: 'https://cakedesign.me/',
       description: `AI-powered cake customization platform serving customers across Italy. Users can design personalized cakes by selecting flavors, shapes, fillings, and decorations. Developed the entire platform including website, administration panel, order management, and custom cake configuration system.`
     },
@@ -58,7 +58,7 @@ export class PortfolioSectionComponent {
       title: 'Deluxy Flowers',
       category: 'Flower Delivery Platform',
       filter: 'filter-web',
-      image: 'img/projects/deluxy-flowers.png',
+      image: 'img/projects/deluxy-flowers-optimized.webp',
       website: 'https://deluxyflowers.com/',
       description: 'Developed an international flower delivery platform featuring premium bouquets, floral arrangements, and customized gifts. Implemented the complete website, administration panel, catalog management, and order processing system.' 
     },
@@ -67,7 +67,7 @@ export class PortfolioSectionComponent {
       title: 'SkillSpace',
       category: 'Learning Management System (LMS)',
       filter: 'filter-web',
-      image: 'img/projects/skillspace.png',
+      image: 'img/projects/skillspace-optimized.webp',
       website: 'https://skillspace.co.za/',
       description: 'Developed a comprehensive learning management platform supporting online courses, live classes, course purchases, student dashboards, and instructor management. Built the website and administration system for managing users, courses, and learning activities.'
     }

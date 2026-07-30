@@ -28,6 +28,7 @@ export class ContactSectionComponent implements OnInit {
 
   contactForm!: FormGroup;
   submitted = false;
+  statusMessage = '';
 
   constructor(
     private fb: FormBuilder
@@ -51,9 +52,16 @@ export class ContactSectionComponent implements OnInit {
   }
 
   onSubmit(): void {
+    if (this.contactForm.invalid) {
+      this.contactForm.markAllAsTouched();
+      return;
+    }
+
     this.submitted = true;
-    if (this.contactForm.invalid) return;
-    console.log(this.contactForm.value);
+    const { name, email, subject, message } = this.contactForm.getRawValue();
+    const body = `Hi Vikas,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`;
+    window.location.href = `mailto:${this.user.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    this.statusMessage = 'Your email app has been opened with the message ready to send.';
     this.contactForm.reset();
     this.submitted = false;
   }

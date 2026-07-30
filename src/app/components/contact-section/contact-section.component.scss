@@ -4,6 +4,20 @@
   color: #dc3545;
 }
 
+label {
+  display: block;
+  margin: 0 0 .45rem .15rem;
+  color: var(--heading-color);
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.form-status {
+  margin: 1rem 0 0;
+  color: #087c52;
+  font-weight: 600;
+}
+
 /* Base styling for all form controls */
 input.form-control,
 textarea.form-control {
