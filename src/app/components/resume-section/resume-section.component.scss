@@ -1,0 +1,97 @@
+/* Button Container */
+.resume-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Common Button Style */
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 200px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    transition: .35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-btn i {
+    font-size: 18px;
+    transition: .35s;
+}
+
+.resume-btn:hover i {
+    transform: scale(1.15);
+}
+
+.resume-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255,255,255,.25);
+    transform: skewX(-25deg);
+    transition: .7s;
+}
+
+.resume-btn:hover::before {
+    left: 140%;
+}
+
+/* Preview Button */
+.preview-btn {
+    background: transparent;
+    color: #5b4cf0;
+    border: 2px solid #5b4cf0;
+}
+
+.preview-btn:hover {
+    background: #5b4cf0;
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(91,76,240,.25);
+}
+
+/* Download Button */
+.download-btn {
+    background: #5b4cf0;
+    color: #fff;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 25px rgba(91,76,240,.28);
+}
+
+.download-btn:hover {
+    background: #493bd1;
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(91,76,240,.34);
+}
+
+.resume-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Mobile */
+@media (max-width:768px){
+    .resume-actions{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-btn{
+        width:100%;
+        max-width:280px;
+    }
+}

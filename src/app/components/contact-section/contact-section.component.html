@@ -1,0 +1,84 @@
+<section id="contact" class="contact section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>
+      If you have any questions or need assistance, please feel free to reach out to us using the form below. We're here to help!
+    </p>
+  </div>
+
+  <div class="container" data-aos="fade" data-aos-delay="100">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-geo-alt flex-shrink-0"></i>
+          <div>
+            <h3>Address</h3>
+            <p>{{ user?.city || 'Your City' }}</p>
+          </div>
+        </div>
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-telephone flex-shrink-0"></i>
+          <div>
+            <h3>Call Us</h3>
+            <p>{{ user?.phoneNo || '000-000-0000' }}</p>
+          </div>
+        </div>
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-envelope flex-shrink-0"></i>
+          <div>
+            <h3>Email Us</h3>
+            <p>{{ user?.email || 'example@example.com' }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="php-email-form" novalidate>
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <label for="contact-name">Your name</label>
+              <input id="contact-name" type="text" formControlName="name" class="form-control" placeholder="Jane Smith" autocomplete="name" />
+              <div *ngIf="(f['name'].touched || f['name'].dirty) && f['name'].errors" class="text-danger small">
+                <div *ngIf="f['name'].errors['required']">Name is required.</div>
+                <div *ngIf="f['name'].errors['minlength']">Name must be at least 2 characters.</div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="contact-email">Email address</label>
+              <input id="contact-email" type="email" formControlName="email" class="form-control" placeholder="jane@company.com" autocomplete="email" />
+              <div *ngIf="(f['email'].touched || f['email'].dirty) && f['email'].errors" class="text-danger small">
+                <div *ngIf="f['email'].errors['required']">Email is required.</div>
+                <div *ngIf="f['email'].errors['email']">Invalid email format.</div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <label for="contact-subject">Subject</label>
+              <input id="contact-subject" type="text" formControlName="subject" class="form-control" placeholder="Project enquiry" />
+              <div *ngIf="(f['subject'].touched || f['subject'].dirty) && f['subject'].errors" class="text-danger small">
+                <div *ngIf="f['subject'].errors['required']">Subject is required.</div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-control" formControlName="message" rows="6" placeholder="Tell me a little about your project"></textarea>
+              <div *ngIf="(f['message'].touched || f['message'].dirty) && f['message'].errors" class="text-danger small">
+                <div *ngIf="f['message'].errors['required']">Message is required.</div>
+                <div *ngIf="f['message'].errors['minlength']">Message must be at least 10 characters.</div>
+              </div>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <button type="submit" [disabled]="submitted">Send Message</button>
+              <p *ngIf="statusMessage" class="form-status" role="status">{{ statusMessage }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
